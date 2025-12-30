@@ -55,7 +55,7 @@ WHERE
 --  Concepts used:  SELECT, WHERE
 
 -- solution:
--- in here it will show  available vehicle with specific type. in type you have to provide type lik 'car', 'bike' etc
+-- in here it will show  available vehicle with specific type. in type you have to provide type like 'car', 'bike' etc
 
 SELECT
   *
