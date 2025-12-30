@@ -124,5 +124,6 @@ HAVING COUNT(b.booking_id) > 2;
 ##  License
 
 This project is for educational purposes.
+anyone can use it
 
 
