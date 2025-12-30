@@ -1,18 +1,17 @@
 
-# Queries Probem and solutions
+- Queries Probem and solutions
 
-### 1. Retrieve booking information along with:
+- 1. Retrieve booking information along with:
 
 - Customer name
 - Vehicle name
-#### Concepts used: INNER JOIN
+- Concepts used: INNER JOIN
 
 
-#### solution:
-in this code it will show the booking information along with customer and vehicle
+- solution: in this code it will show the booking information along with customer and vehicle
 
 
-```
+
 SELECT
   b.booking_id,
   u.name AS customer_name,
@@ -24,17 +23,17 @@ FROM
   bookings AS b
   INNER JOIN users AS u ON b.user_id = u.user_id
   INNER JOIN vehicles AS v ON b.vehicle_id = v.vehicle_id;
-```
-
-### 2. Find all vehicles that have never been booked.
-
-#### Concepts used: NOT EXISTS
-
-#### solution:
-in this code it will show the vehicle with no booking or the vehicle which never has been booked 
 
 
-```
+- 2. Find all vehicles that have never been booked.
+
+- Concepts used: NOT EXISTS
+
+- solution:
+-in this code it will show the vehicle with no booking or the vehicle which never has been booked 
+
+
+
 SELECT
   *
 FROM
@@ -51,14 +50,13 @@ WHERE
 ```
 
 
-### 3.  WHERE Retrieve all available vehicles of a specific type (e.g. cars).
+- 3.  WHERE Retrieve all available vehicles of a specific type (e.g. cars).
 
-#### Concepts used:  SELECT, WHERE
+-  Concepts used:  SELECT, WHERE
 
-#### solution:
-in here it will show  available vehicle with specific type. in type you have to provide type lik 'car', 'bike' etc
+- solution:
+- in here it will show  available vehicle with specific type. in type you have to provide type lik 'car', 'bike' etc
 
-```
 SELECT
   *
 FROM
@@ -70,15 +68,14 @@ WHERE
 
 
 
-### 4.  GROUP BY and HAVING: Find the total number of bookings for each vehicle and display only those vehicles that have more than 2 bookings.
+- 4.  GROUP BY and HAVING: Find the total number of bookings for each vehicle and display only those vehicles that have more than 2 bookings.
 
-#### Concepts used:  GROUP BY, HAVING, COUNT
+- Concepts used:  GROUP BY, HAVING, COUNT
 
 
-#### solution:
-in this Queries it will show the number vehicle that have more than 2 active booking 
+- solution:
+- in this Queries it will show the number vehicle that have more than 2 active booking 
 
-```
 SELECT
   v.name AS vehicle_name,
   count(b.booking_id) AS total_bookings
@@ -89,7 +86,7 @@ GROUP BY
   v.name
 HAVING
   count(b.booking_id) > 2;
-```
+
 
 
 
